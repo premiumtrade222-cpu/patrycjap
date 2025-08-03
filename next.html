@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrycja ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at center, #ffd6d6, #ff8a8a);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Pacifico', cursive;
+      color: #9b1c1c;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px #7a1212;
+    }
+
+    p {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+      max-width: 90%;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    img.main {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(155, 28, 28, 0.7);
+      margin-top: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      max-width: 45%;
+      max-height: 200px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(155, 28, 28, 0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(220, 30, 30, 0.9);
+    }
+
+    a {
+      margin: 10px;
+      display: inline-block;
+      font-size: 1.2rem;
+      color: #9b1c1c;
+      text-decoration: none;
+      border: 2px solid #9b1c1c;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #9b1c1c;
+      color: white;
+    }
+
+    @media (max-width: 500px) {
+      .gallery img {
+        max-width: 80%;
+      }
+
+      a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>muj kochany szonik ❤️</h2>
+  <p>kocham twuj gyat i wszystko owo</p>
+
+  <img src="images/andrew.jpg" alt="Patrycja" class="main" />
+
+  <div class="gallery">
+    <img src="images/patiszon.jpg" alt="Patrycja 1" />
+    <img src="images/pati.jpg" alt="Patrycja 2" />
+    <img src="images/patr.jpg" alt="Patrycja 3" />
+  </div>
+
+  <a href="index.html">Wróć do poprzedniej strony</a>
+  <a href="third.html">Przejdź do następnej strony</a>
+
+</body>
+</html>

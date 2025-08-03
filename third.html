@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trzecia strona ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, #ffafbd, #ffc3a0);
+      font-family: 'Pacifico', cursive;
+      color: #8b2e2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      text-shadow: 1px 1px 6px rgba(139, 46, 46, 0.7);
+    }
+
+    p {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+      margin: 10px 0 30px;
+      text-shadow: 1px 1px 6px rgba(139, 46, 46, 0.7);
+      max-width: 90%;
+      line-height: 1.5;
+    }
+
+    .floating-hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #e63946;
+      transform: rotate(-45deg);
+      animation: floatUp linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #e63946;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -12.5px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 12.5px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(139, 46, 46, 0.5);
+      margin: 20px 0;
+    }
+
+    nav {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav button {
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #e63946;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(230, 57, 70, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #a02834;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SZON</h1>
+  <p>Twuj gyat jest niczym kwiat, bez niego niczym jest muj świat... i tak he iksde 🌸❤️</p>
+
+  <img src="images/patrycja1.jpg" alt="Patrycja 3" />
+
+  <div class="floating-hearts" id="hearts-container"></div>
+
+  <nav>
+    <button onclick="location.href='index.html'">Strona 1</button>
+    <button onclick="location.href='next.html'">Strona 2</button>
+    <button onclick="location.href='fourth.html'">Strona 4</button>
+  </nav>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts-container');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      const size = 15 + Math.random() * 20;
+      heart.style.width = size + 'px';
+      heart.style.height = size + 'px';
+      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    setInterval(createHeart, 350);
+  </script>
+
+</body>
+</html>
